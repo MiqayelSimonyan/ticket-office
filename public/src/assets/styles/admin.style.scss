@@ -1,0 +1,147 @@
+$delete-th: #7b3535;
+
+.admin_wrapper {
+	font-family: tahoma;
+	margin-top: 30px;
+	h2 {
+		margin: 0 0 20px 0;
+	}
+	a {
+		text-decoration: none;
+	}
+	.admin_table {
+		border-collapse: collapse;
+	    text-align: center;
+	    margin-top: 50px;
+	    th {
+	    	padding: 10px;
+    		border: 1px solid #000;
+    		color: #fff;
+    		background: #98962c;
+    		position: relative;
+    		&.filter_th:after {
+	 			content: '';
+			    width: 0;
+			    height: 0;
+			    border-left: 7px solid transparent;
+			    border-right: 7px solid transparent;
+			    border-top: 7px solid #614b4b;
+			    position: absolute;
+			    right: 30px;
+			    top: 50%;
+			    margin-top: -3px;
+			    cursor: pointer;			    
+	 		}
+			&.filter_th.admin_table_day:after {
+	 			top: 26%;
+	 		}
+	    }
+	    .filter_wrapper {
+	    	position: relative;
+			z-index: 100;
+			text-align: left;
+			select {
+				border-color: rgb(169, 169, 169);
+			    min-height: 24px;
+			    text-align: center;
+			    padding: 5px;
+			    width: 100%;
+			    border-radius: 5px;
+			    box-shadow: none;
+			    border: 1px solid #4d6154;
+			    font-size: 14px;
+			    box-sizing: border-box;
+			    margin: 3px 0;			    
+			}
+		}
+	    tr {
+	 		text-align: center;	 		
+	    }
+	    tr:nth-child(even) {
+			background: #a5a569;
+	    }
+	    tr:nth-child(odd) {
+			background: #545431;
+		    color: #fff;
+	    }
+	    td {
+	    	padding: 10px;
+	    	border: 1px solid #000;
+	    	text-align: center;
+	    }
+	}
+	form {
+		text-align: left;
+		.form_item_group {
+			margin-bottom: 10px;
+			label {
+				font-size: 14px;
+			    margin-bottom: 5px;
+			    display: block;
+			}
+			input {
+				padding: 6px;
+			    min-width: 300px;
+			    width: 100%;
+			    border-radius: 5px;
+			    box-shadow: none;
+			    border: 1px solid #4d6154;
+			    font-size: 14px;
+			    box-sizing: border-box;
+			}
+			select {
+				width: 100%;
+				min-height: 30px;
+			}
+			& .duration_blog:first-child {
+				float: left;
+			}
+			.duration_blog {
+				width: 49%;
+    			float: right;
+			}
+		}
+	}
+	.form_submit_btn {
+		display: block;
+		text-align: center;
+		border: 0;
+	    background: #98962c;
+	    color: #fff;
+	    border-radius: 5px;
+	    min-width: 322px;
+	    width: 100%;
+	    margin-top: 10px;
+	    font-size: 14px;
+	    cursor: pointer;
+	    padding: 7px 0;
+	}
+	table {
+		width: 100%;
+		th {
+			&.edit_th, &.delete_th {
+				width: 100px;
+			}
+		}
+		thead {
+			tr {
+				text-align: left;
+			}
+		}
+		tbody {
+			text-align: center;
+			td {
+				vertical-align: top;
+				text-align: left;
+				.form_submit_edit, .form_submit_delete {
+					display: inline-block;
+					width: 90px;
+    				min-width: 32px;
+				}
+				.form_submit_delete {
+					background: $delete-th;
+				}
+			}
+		}
+	}
+}

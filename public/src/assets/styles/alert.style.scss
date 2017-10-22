@@ -1,0 +1,30 @@
+.alert_wrapper {
+	font-family: tahoma;
+	position: absolute;
+    right: 8px;
+    top: 60px;
+    .alert_item {
+	    color: #fff;
+	    overflow: hidden;
+	    margin-bottom: 10px;
+    	.error_name_wrapper {
+    		padding: 15px;
+    		float: left;
+	    	.error_name {
+	    		margin-right: 15px;
+	    	}
+    	}
+    	.err_delet_btn_wrappper {
+    		padding-top: 16px;
+			padding-right: 10px;
+			height: 33px;
+			border-left: 1px solid;
+			padding-left: 15px;
+			float: right;
+	    	.err_delet_btn {
+	    		margin-right: 5px;
+    			cursor: pointer;
+	    	}
+	    }
+    }
+}
